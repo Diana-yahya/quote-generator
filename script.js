@@ -28,6 +28,7 @@ let apiQuotes = [];
 function newQuote(){
 
     loading();
+
     // pick a rondom quote
     const quote = apiQuotes[Math.floor(Math.random()*apiQuotes.length)];
     // if author dident unknown
@@ -52,7 +53,7 @@ function newQuote(){
 // get quotes from api
 async function getQuotes() {
     loading()
-    const apiUrl = 'https://api.quotable.io/quotes?limit=150';
+    const apiUrl = 'https://api.quotable.io/quotes?limit=30';
     try{
         const response = await fetch(apiUrl);
         const data = await response.json();
